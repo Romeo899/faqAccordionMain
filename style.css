@@ -1,0 +1,46 @@
+/* Mobile first Design */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+
+    font-size: 16px;
+}
+
+/* setting background */
+body {
+    background-position: top;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.background {
+    max-height: 400px;
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+
+/* attribution */
+
+.attribution {
+    display: none;
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* Tablet */
+
+
+/* Desktop */

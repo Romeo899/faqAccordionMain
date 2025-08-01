@@ -268,7 +268,14 @@ img {
     max-height: 40px;
 }
 
-/* question container  */
+
+
+/* question container | active state */
+
+.question:hover {
+    cursor: pointer;
+    color: var(--violet-600);
+}
 
 .question {
     font: var(--text-preset-2);

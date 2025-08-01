@@ -75,6 +75,12 @@ body {
 
 }
 
+/* radio input style hidden */
+
+input {
+    display: none;
+}
+
 /* header styles */
 
 .header {
@@ -106,6 +112,7 @@ body {
 
 .question-container {
     display: flex;
+    cursor: pointer;
 
 }
 
@@ -116,10 +123,43 @@ body {
     color: var(--purple-950);
 }
 
+
+
+
+/* input radio li show hide logic */
+
+/* Default: show plus hide minus */
+
+.FAQ-item input[type="radio"] ~ .question-container .plus-icon {
+    display: inline;
+}
+
+.FAQ-item input[type="radio"] ~ .question-container .minus-icon {
+    display: none;
+}
+
+/* When checked: show minus, hide plus */
+
+.FAQ-item input[type="radio"]:checked ~ .question-container .minus-icon {
+    display: inline;
+}
+
+.FAQ-item input[type="radio"]:checked ~ .question-container .plus-icon {
+    display: none;
+}
+
 /* answer hidden */
 
 .answer {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* expand when checked:  */
+
+.FAQ-item input[type="radio"]:checked ~ .answer {
+    max-height: 200px;
 }
 
 

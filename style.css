@@ -30,8 +30,8 @@
     --text-preset-2: 600 18px/21px "Work Sans", sans-serif;
     --mobile-text-preset-2: 600 16px/21px "Work Sans", sans-serif;
 
-    --text-preset-3: 500 16px/24px "Work Sans", sans-serif;
-    --mobile-text-preset-3: 400 14px/24px "Work Sans", sans-serif;
+    --text-preset-3: 400 16px/24px "Work Sans", sans-serif;
+    --mobile-text-preset-3: 400 14px/1.5 "Work Sans", sans-serif;
 
     --default-letter-spacing: 0;
 
@@ -43,6 +43,7 @@
     --spacing-400: 32px;
     --spacing-450: 38px;
     --spacing-500: 40px;
+    --spacing-600: 60.5px;
 }
 
 /* body styles */
@@ -61,12 +62,16 @@ body {
 
 /* background image */
 
-.background-image {
+.background-image-mobile {
     max-height: 232px;
     max-width: 100%;
     position: absolute;
     inset: 0;
     z-index: -1;
+}
+
+.background-image-desktop {
+    display: none;
 }
 
 .card {
@@ -219,8 +224,85 @@ img {
     color: hsl(228, 45%, 44%);
 }
 
+/* transition from mobile to desktop */
 
-/* Tablet */
+@media (min-width: 376px) {
+    .background-image-desktop {
+    display: block;
+    max-height: 320px;
+    max-width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+}
+
+.background-image-mobile {
+    display: none;
+}
+}
 
 
-/* Desktop */
+
+/* Tablet & Desktop*/
+@media (min-width: 768px) {
+
+.card {
+    min-height: 565px;
+    max-width: 600px;
+
+    margin: 60.5px auto;
+    padding: var(--spacing-500);
+
+    box-shadow: 0 32px 56px 0 hsla(281, 100%, 23%, 0.1)
+}
+
+/* header  */
+
+.FAQ-header {
+    font: var(--text-preset-1);
+}
+
+.purple-star {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/* question container  */
+
+.question {
+    font: var(--text-preset-2);
+}
+
+.answer {
+    font: var(--text-preset-3);
+}
+
+/* FAQ-list margin-top */
+
+.FAQ-list {
+    margin-top: var(--spacing-400);
+}
+
+/* attribution */
+
+.attribution {
+    display: block;
+    position: absolute;
+    top: 5px;
+
+}
+
+.attribution a, footer {
+    font: var(--mobile-text-preset-2);
+
+    color: var(--purple-background);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}   
+}
+

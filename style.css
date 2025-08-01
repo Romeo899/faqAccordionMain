@@ -29,7 +29,9 @@
 
     --text-preset-2: 600 18px/21px "Work Sans", sans-serif;
     --mobile-text-preset-2: 600 16px/21px "Work Sans", sans-serif;
+
     --text-preset-3: 500 16px/24px "Work Sans", sans-serif;
+    --mobile-text-preset-3: 400 14px/24px "Work Sans", sans-serif;
 
     --default-letter-spacing: 0;
 
@@ -68,11 +70,13 @@ body {
 }
 
 .card {
+    min-height: 551px;
+    max-width: 327px;
     background-color: var(--white);
     border-radius: var(--spacing-100);
-    margin: 0 var(--spacing-300);
+    margin: 130.5px var(--spacing-300);
     padding: var(--spacing-300);
-
+    box-sizing: border-box;
 }
 
 /* radio input style hidden */
@@ -97,6 +101,14 @@ input {
     margin-right: var(--spacing-300);
 }
 
+/* overflow hidden;  */
+
+.FAQ-item {
+    min-height: var(--spacing-450);
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
 .FAQ-header {
     font: var(--mobile-text-preset-1);
     color: var(--purple-950);
@@ -111,18 +123,45 @@ input {
 /* question container */
 
 .question-container {
+    max-height: var(--spacing-450);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
 
 }
 
-
-
 .question {
+    min-width: 225px;
     font: var(--mobile-text-preset-2);
     color: var(--purple-950);
+    margin-right: var(--spacing-300);
 }
 
+.plus-icon, .minus-icon {
+    max-width: 30px;
+    max-height: 30px;
+
+}
+
+/* answer layout and styles */
+
+.answer {
+    font: var(--mobile-text-preset-3);
+    color: var(--purple-600);
+    margin-top: var(--spacing-300);
+    
+}
+
+
+
+/* divider */
+
+.divider {
+    border: 1px solid var(--purple-100);
+    box-sizing: border-box;
+    margin: var(--spacing-300) 0;
+}
 
 
 
@@ -158,8 +197,8 @@ input {
 
 /* expand when checked:  */
 
-.FAQ-item input[type="radio"]:checked ~ .answer {
-    max-height: 200px;
+.FAQ-item input[type="radio"]:checked ~ .answer{
+    max-height: 300px;
 }
 
 

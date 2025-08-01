@@ -10,21 +10,35 @@
     font-size: 16px;
 }
 
-/* setting background */
-body {
-    background-position: top;
-    min-height: 100vh;
-    min-width: 100vw;
-}
+:root {
+    /* colors */
 
-.background {
-    max-height: 400px;
-    background-image: url(./assets/images/background-pattern-mobile.svg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --purple-100: hsl(275, 100%, 97%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-950: hsl(292, 42%, 14%);
+    --violet-600: hsl(281, 83%, 54%);
+
+    /* typography */
+
+    --text-preset-1: 700 56px/66px "Work Sans", sans-serif;
+    --mobile-text-preset-1: 700 32px/66px "Work Sans", sans-serif;
+
+    --text-preset-2: 600 18px/21px "Work Sans", sans-serif;
+    --mobile-text-preset-2: 600 16px/21px "Work Sans", sans-serif;
+    --text-preset-3: 500 16px/24px "Work Sans", sans-serif;
+
+    --default-letter-spacing: 0;
+
+    /* Spacing */
+
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-450: 38px;
+    --spacing-500: 40px;
 }
 
 
